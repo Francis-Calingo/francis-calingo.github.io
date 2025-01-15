@@ -26,141 +26,89 @@
     </header>
     <section>
       <h1>PROJECT OVERVIEW: Brief Demographic Snapshot of the Filipino Canadian Community (Using R)</h1>
+<head>
+    <title>HTML font size Attribute</title>
+</head>
 
-      <ul>
-        <li>Performed exploratory data analysis, correlation analysis, and geospatial mapping of data on the Filipino/a/x community in Canada.</li>
-        <li>Scraped data from Statistics Canada.</li>
-        <li>Performed feature engineering on some variables to create new variables.</li>
-        <li>Downloaded shapefile of Canada's previous federal electoral district boundaries to create choropleth maps.</li>
-      </ul>
-      
-    <h2>Code and Resources Used</h2>
-      <ul>
-        <li><b>IDEs Used:</b> RStudio</li>
-        <li><b>R Version:</b> rstudio-2024.12.0</li>
-        <li><b>Libraries:</b> data.table, funModeling, Hmisc, ggplot2, sf, dplyr, corrplot, CatEncoders</li>
-      </ul>
-      
-    <h2>Web Scraping</h2>
-     
-     <ul>
-     <li><a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E "><b>Census Profile, 2021 Census of Population:</b></a> </li>
-     <li><a href="https://www12.statcan.gc.ca/census-recensement/2016/dp-pd/prof/index.cfm?Lang=E "><b>Census Profile, 2016 Census of Population:</b> </a></li>
-     <li><a href="https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm?year=21"><b>2021 Census – Boundary files:</b></a></li>
-     </ul>
-    
-    <h2>Feature Engineering</h2>
-    
-    <b>VARIABLES SCRAPPED FROM STATISTICS CANADA</b>
-    <li>Electoral District (2013 Representation Order)</li>
-    <li>Province/Territory</li>
-    <li>Population (2021 Census)</li>
-    <li>% Filipinos</li>
-    <li>Number of Filipinos (2021 Census)</li>
-    <li>Number of Filipinos (2016 Census)</li>
-    <li>% of Population with Knowledge of French</li>
-    <li>Healthcare Workers (NOC Classification)</li>
-    <li>Number of Recent Immigrants (2016-2021)</li>
-    <li>Recent Immigrants from PH (2016-2021)</li>
-    <li>Number of People with Bachelors Degree or Higher</li>
-    <li>Median Age</li>
-    <li>Bikol Mother Tongue</li>
-    <li>Bisaya, n.o.s. Mother Tongue</li>
-    <li>Cebuano Mother Tongue</li>
-    <li>Hiligaynon Mother Tongue</li>
-    <li>Ilocano Mother Tongue</li>
-    <li>Kankanaey Mother Tongue</li>
-    <li>Kinaray-a Mother Tongue</li>
-    <li>Pampangan Mother Tongue</li>
-    <li>Pangasinan Mother Tongue</li>
-    <li>Tagalog Mother Tongue</li>
-    <li>Waray-Waray Mother Tongue</li>
-    <li>Second Most Spoken Philippine Language</li>
-    
-    <b>CONSTRUCTED VARIABLES:</b>
-    <li>Healthcare Workers (per 100,000)</li>
-    <li>% of Recent Immigrants from PH (2016-2021)</li>
-    <li>Number of People with Bachelor's Degree or Higher (per 100,000)</li>
-    <li>Filipino Growth Rate (2016-2021)</li>
-    <li>% Second Most Spoken Philippine Language</li>
-    
-    
-    <h2>Exploratory Data Analysis</h2>
-    
-    <h4><i> Numerical Variables </i></h4>
-    
-    <img width="911" alt="image" src="https://github.com/user-attachments/assets/a846c99a-43a9-4ad8-87fa-7e6e3622d249" />
-    
-    <h4><i>Categorical Variables </i></h4>
-    
-    <img width="1013" alt="image" src="https://github.com/user-attachments/assets/1821d092-6d6b-4d31-a1b3-93efa74b6030" />
-    
-    <img width="999" alt="image" src="https://github.com/user-attachments/assets/23c4b4a9-99f7-473f-b84a-2371b10d0c72" />
-    
-    <h4><i>Histogram Plots </i></h4>
-    <i> Canada </i>
-    
-    <img width="993" alt="image" src="https://github.com/user-attachments/assets/7b0cd999-3dd9-425e-8b93-39057ab4f95d" />
-    
-    <i> Atlantic Canada </i>
-    
-    <img width="950" alt="image" src="https://github.com/user-attachments/assets/9b62c0ab-9205-4912-bc15-1d7002b453da" />
-    
-    <img width="973" alt="image" src="https://github.com/user-attachments/assets/5d22eb83-9e9e-4b0f-b07e-00b980765f67" />
-    
-    <img width="944" alt="image" src="https://github.com/user-attachments/assets/6d25beec-38ec-45ed-9a5e-bba412117b68" />
-    
-    
-    <i> Quebec </i>
-    
-    <img width="1029" alt="image" src="https://github.com/user-attachments/assets/a037a4fd-ea41-493f-9673-dfbd1beedf37" />
-    
-    
-    <i> Ontario </i>
-    
-    <img width="545" alt="image" src="https://github.com/user-attachments/assets/a7cbe29c-b448-41e6-b333-47c28356a627" />
-    
-    
-    <i> Prairies </i>
-    
-    <img width="712" alt="image" src="https://github.com/user-attachments/assets/5fd4f046-9ef7-4f92-9e74-6b8e29b344f5" />
-    
-    <img width="734" alt="image" src="https://github.com/user-attachments/assets/e8a77b28-ff37-4f41-89bd-aa353dd7ad74" />
-    
-    <img width="749" alt="image" src="https://github.com/user-attachments/assets/88b9fe36-aaeb-4005-a32f-08fb68c6d364" />
-    
-    <i> British Columbia </i>
-    
-    <img width="763" alt="image" src="https://github.com/user-attachments/assets/0ac266d8-b029-47bf-812c-4fcc18fd4904" />
-    
-    
-    <h2>Correlation Analysis</h2>
-    <ul>
-        <li>Variables used for analysis:</li>
-        <ul>
-          <li>Province/Territory</li>
-          <li>% Filipinos</li>
-          <li>% Population with Knowledge of French</li>
-          <li>Median Age</li>
-          <li>Healthcare workers (oer 100,000)</li>
-          <li>% of Recent Immigrants from the PH (2016-2021)</li>
-          <li>Number of People with Bachelors Degree or Higher (per 100,000)</li>
-          </ul>
-        <li>Label encoding (i.e., assigning integers for each province and territory) was used for the variable Province/Territory</li>
-      </ul>
-    
-      <img width="636" alt="image" src="https://github.com/user-attachments/assets/bd648d12-bcbc-437e-9602-c94458daf0fe" />
-    
-      
-    <h2>Geospatial Analysis</h2>
-    
-    <img width="604" alt="image" src="https://github.com/user-attachments/assets/a2b151f7-d4c7-4f7a-bb01-cac2b213f890" />
-    
-    <img width="607" alt="image" src="https://github.com/user-attachments/assets/b639a44d-e2bc-4309-b83d-fe10a91a1f1d" />
-    
-    <img width="554" alt="image" src="https://github.com/user-attachments/assets/39f99f77-70ec-40d9-9042-af35a8a365f2" />
-    
-    <img width="590" alt="image" src="https://github.com/user-attachments/assets/ed72cc26-efa0-4d8e-8474-7fcdb4ad1d87" />
+<body>
+
+  <h1>Transit and Healthcare Accessibility in Toronto's Filipino Communities</h1>
+  <h2>Francis Emmanuel Calingo</h2>
+
+<div id="INTRODUCTION" align="left">
+ <h2>INTRODUCTION</h2>
+<p><font size="4">For my project, I am focusing on Toronto, the city that I have lived in for over 20 years. Not only is the diversity of the city makes it an interesting case study for 
+spatial analysis, but my familiarity with its human and physical geography makes it an easy choice for my very first GIS project. Being a Filipino immigrant myself, 
+I wanted to observe and analyze a brief snapshot of the five federal Toronto ridings (2013 representation order) that have the highest per-capita Filipino population 
+based on the 2021 Census, and map out its relationships with hospital locations and transit lines.By doing so, I hope to map out and analyze any potential patterns that 
+can utilized when discussing transit accessibility and health inequalities affecting the city’s Filipino community.</p>
+</div>
+
+<div id="METHODOLOGY" align="left">
+ <h2>METHODOLOGY</h2>
+<p><font size="4">Using ArcGIS Pro, I will map the said five federal ridings by digitizing polygons on a satellite basemap of Toronto. I will also digitize 10 red lines that roughly map the 
+Toronto Transit Commission's 10 busiest bus routes from 2023 based on ridership, as well as several points (each represented by a health symbol) that map out the locations of hospitals 
+officially under "Ontario Health Toronto".</font></p>
+</div>
+
+
+<div id="DATA COLLECTION AND SOURCES" align="left">
+ <h2>DATA COLLECTION AND SOURCES</h2>
+  <ul>
+    <li><b>CENSUS DATA:</b> <a href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E">https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/index.cfm?Lang=E</a></li>
+    <a href="https://www.thestar.com/interactives/which-ttc-route-had-the-most-delays-in-2023-which-had-the-most-breakdowns-or/article_713836f8-92bd-11ee-8ac7-ffa407d80fe3.html">https://www.thestar.com/interactives/which-ttc-route-had-the-most-delays-in-2023-which-had-the-most-breakdowns-or/article_713836f8-92bd-11ee-8ac7-ffa407d80fe3.html</a></li>
+    <li><b>LIST OF HOSPITALS ACCORDING TO THE PROVINCE OF ONTARIO:</b> <a href="https://www.ontario.ca/page/general-hospital-locations#section-4">https://www.ontario.ca/page/general-hospital-locations#section-4</a></li>
+    <li><b>TORONTO FEDERAL RIDINGS WITH HIGHEST PER-CAPITA FILIPINO POPULATION:</b></li>
+<table border="1">
+  <tr>
+    <th>RIDING NAME</th>
+    <th>FILIPINO POPULATION (AS PERCENTAGE)</th>
+  </tr>
+  <tr>
+    <td>York Centre</td>
+    <td>19.3</td>
+  </tr>
+  <tr>
+    <td>Scarborough Centre</td>
+    <td>13.1</td>
+  </tr>
+  <tr>
+    <td>Eglinton--Lawrence</td>
+    <td>10.9</td>
+  </tr>
+  <tr>
+    <td>Scarborough--Rouge Park</td>
+    <td>8.9</td>
+  </tr>
+  <tr>
+    <td>Scarborough--Guildwood</td>
+    <td>8.8</td>
+  </tr>
+</table>
+  </ul>
+</div>
+
+<div id="RESULTS AND DISCUSSION" align="left">
+ <h2>RESULTS AND DISCUSSION</h2>
+<img src="https://coursera-assessments.s3.amazonaws.com/assessments/1731125207555/7ab6ee9d-85e4-4195-bb4c-e9a9e59fc9d1/Brief%20Snapshot%20of%20Filipino%20Community%20in%20Toronto.jpeg" 
+alt="Stellite basemap image of Toronto. The following three map elements have been layerd on top of it: (1) 5 digitized shapes representing the 5 aforementioned ridings, each with different shades
+of blue to represent different per-capita Filipino populations (2) 10 digitized red lines representing the 10 busiest bus routes in Toronto (3) Several heart inside white circle icons scattered
+across the map representing Toronto's hospital, with a higher density of them in downtown Toronto." width="1400" height="900"/>
+
+<p><font size="2"> <i> <b>IMAGE DESCRIPTION:</b>Satellite map of Toronto. 5 digitized blue polygons representing the 5 federal ridings in Toronto that have the highest per-capita Filipino population (per 2021 Census).
+ Darker blue shades represent higher percentage, and lighter blue shades represent lower percentage. 10 digitized red lines with labels represent the 10 busiest bus routes from 2023 by ridership. Several digitized points (heart symbol in white circle) represent locations of hospitals in Toronto. Attribute table of the 
+10 lines is shown, with the list going in ascending order from 10th busiest to most busiest.</font></i></p>
+
+<p><font size="4"> Notice that they are concentrated in Toronto's northern suburb (North York) and eastern suburb (Scarborough). Observe that 7 of the 10 busiest routes traverse the highlighted ridings, and two
+more straddling one or more of their borders. Also observe that the hospitals are more concentrated in the downtown while they become more sparse in the suburbs, especially in Scarborough, despite the fact that well over half a million people live in Scarborough.
+</p>
+
+<p><font size="4">While the analysis and mapping is elementary and not very comprehensive, it does raise some questions about transit accessibility and healthcare inequality. There are of course many factors 
+that go behind the deployment of buses, as well as higher ridership numbers, but given that many Filipinos, like many immigrant groups in Toronto, rely on public transit, one has to wonder if 
+resources are being allocated equitably. The same could be said for healthcare. While the lower density of hospitals doesn't necessarily mean poorer health quality (and hospitals are by no means monolithic), it once again raises questions about whether healthcare is accessible enough in Scarborough. As seen from the COVID-19 pandemic, there remains inequalities in healthcare
+that disproportionately impacts migrant and BIPOC communities, making the analysis of the locations of hospitals across Toronto more important. </p>
+</div>
+</body>body>
     </section>
 </body>
 </html>
