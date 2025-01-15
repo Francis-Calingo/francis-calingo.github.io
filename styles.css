@@ -1,5 +1,5 @@
 body {
-  background: black;
+  background: grey;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
@@ -8,6 +8,11 @@ header {
     color: white;
     text-align: center;
     padding: 1em 0;
+}
+
+li.header {
+  display: inline-block;
+  margin-right: 20px;
 }
 
 section {
